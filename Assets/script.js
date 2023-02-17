@@ -37,37 +37,6 @@ function generateSpecialChar() {
   return result;
 }
 
-// function generatePassword(){
-//   var passwordLength = document.getElementById("#characterLength").value;
-//   var lowercase = document.getElementById("#lowercase").value;
-//   var numeric = document.getElementById("#numeric").value;
-//   var uppercase = document.getElementById("#uppercase").value;
-//   var specialChars = document.getElementById("#specialChars").value;
-//   const password = [];
-//   for (let i = 0; i < passwordLength ; i++){
-//     if (lowercase){
-//       password.push= generateLowercase();
-//       i++;
-//     }
-//     if (uppercase){
-//       password.push= generateUppercase();
-//       i++;
-//     }
-//     if (numeric){
-//       password.push= generateNumber();
-//       i++;
-//     }
-//     if (specialChars){
-//       password.push= generateSpecialChar();
-//       i++;
-//     }
-//   }
-//   let text = password.toString();
-//   console.log(text);
-//   return text;
-// }
-
-// Write password to the #password input
 function writePassword() {
   var passwordText = '';
   passwordText = document.querySelector("#password");
@@ -79,8 +48,7 @@ function writePassword() {
   const numeric = confirm("Would you like numeric characters in your password (ok for yes/ cancel for no)");
   const uppercase = confirm("Would you like uppercase characters in your password (ok for yes/ cancel for no)");
   const specialChars = confirm("Would you like special characters in your password (ok for yes/ cancel for no)");
-  if (lowercase )
-  let password = '';
+  var password = '';
   for (let i = 0; i < passwordLength ; i){
     if (lowercase && i< passwordLength){
       password += generateLowercase();
@@ -96,9 +64,6 @@ function writePassword() {
     }
     if (specialChars && i< passwordLength){
       password += generateSpecialChar();
-      i++;
-    }
-    else {
       i++;
     }
   }
