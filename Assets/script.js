@@ -48,6 +48,7 @@ function writePassword() {
   const numeric = confirm("Would you like numeric characters in your password (ok for yes/ cancel for no)");
   const uppercase = confirm("Would you like uppercase characters in your password (ok for yes/ cancel for no)");
   const specialChars = confirm("Would you like special characters in your password (ok for yes/ cancel for no)");
+  if (lowercase || numeric || uppercase || specialChars){
   var password = '';
   for (let i = 0; i < passwordLength ; i){
     if (lowercase && i< passwordLength){
@@ -68,6 +69,10 @@ function writePassword() {
     }
   }
   passwordText.value = password;
+}
+else {
+  window.alert("At least one of them must be true, please try again");
+}
 }
 
 
